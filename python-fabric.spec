@@ -1,6 +1,6 @@
 Name:		python-fabric
 Version:	3.2.2
-Release:	2
+Release:	3
 Source0:	https://files.pythonhosted.org/packages/source/f/fabric/fabric-%{version}.tar.gz
 Summary:	High level SSH command execution
 URL:		https://pypi.org/project/fabric/
