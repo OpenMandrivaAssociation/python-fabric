@@ -2,12 +2,13 @@
 
 Name:		python-fabric
 Version:	3.2.3
-Release:	1
+Release:	2
 Summary:	High level SSH command execution
 License:	BSD
 Group:		Development/Python
 URL:		https://pypi.org/project/fabric/
 Source0:	https://files.pythonhosted.org/packages/source/f/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Patch0:	https://github.com/fabric/fabric/commit/95008180d9f0b8c05a29e5fadc1572d2907942a7.patch#/3.2.3-fix-invoke-install-requirement-bounds.patch
 
 BuildSystem:	python
 BuildArch:	noarch
