@@ -1,0 +1,23 @@
+From 95008180d9f0b8c05a29e5fadc1572d2907942a7 Mon Sep 17 00:00:00 2001
+From: Jeff Forcier <jeff@bitprophet.org>
+Date: Sun, 5 Apr 2026 19:25:13 -0400
+Subject: [PATCH] Reflection of 63f3d9bd for main branch
+
+We /only/ work on Invoke >3.0 after this point.
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 7bb0bac77..3778a2f2f 100644
+--- a/setup.py
++++ b/setup.py
+@@ -64,7 +64,7 @@
+     },
+     python_requres=">=3.6",
+     install_requires=[
+-        "invoke >= 2.0, <3.0",
++        "invoke >= 3.0",
+         "paramiko>=2.4",
+         "decorator>=5",
+         "deprecated>=1.2",
