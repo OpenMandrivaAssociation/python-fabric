@@ -1,27 +1,28 @@
+%define module fabric
+
 Name:		python-fabric
-Version:	3.2.2
-Release:	3
-Source0:	https://files.pythonhosted.org/packages/source/f/fabric/fabric-%{version}.tar.gz
+Version:	3.2.3
+Release:	1
 Summary:	High level SSH command execution
-URL:		https://pypi.org/project/fabric/
 License:	BSD
 Group:		Development/Python
-BuildRequires:	python%{pyver}dist(pip)
+URL:		https://pypi.org/project/fabric/
+Source0:	https://files.pythonhosted.org/packages/source/f/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+
+BuildSystem:	python
 BuildArch:	noarch
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 
 %description
 High level SSH command execution
 
-%prep
-%autosetup -p1 -n fabric-%{version}
-
-%build
-%py_build
-
-%install
-%py_install
+%prep -a
+# Remove bundled egg-info
+rm -rf %{module}.egg-info
 
 %files
 %{_bindir}/fab
-%{py_sitedir}/fabric
-%{py_sitedir}/fabric-*.*-info
+%{py_sitedir}/%{module}
+%{py_sitedir}/%{module}-%{version}*.*-info
