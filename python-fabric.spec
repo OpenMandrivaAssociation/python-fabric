@@ -2,7 +2,7 @@
 
 Name:		python-fabric
 Version:	3.2.3
-Release:	2
+Release:	3
 Summary:	High level SSH command execution
 License:	BSD
 Group:		Development/Python
